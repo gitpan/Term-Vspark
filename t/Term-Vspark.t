@@ -7,7 +7,6 @@
 
 use strict;
 use warnings;
-#use Term::Size;
 
 use Test::More tests => 1;
 
@@ -16,10 +15,10 @@ BEGIN { use_ok('Term::Vspark') };
 #chomp( @ARGV = <STDIN> ) unless @ARGV;
 #
 #my @list = sort { $a <=> $b } @ARGV;
-#my ($columns, $rows) = Term::Size::chars *STDOUT{IO};
+#my $columns = qx{tput cols};
 #
 #Term::Vspark::show_graph(
 #    'max'     => $list[-1],
-#    'columns' => $columns,
+#    'columns' => 10, #$columns - 1,
 #    'values'  => \@ARGV,
 #);
