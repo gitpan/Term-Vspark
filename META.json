@@ -1,12 +1,12 @@
 {
    "abstract" : "Perl extension for dispaying bars in the terminal",
    "author" : [
-      "Gil Gonçalves <lurst@gmail.com>"
+      "Gil Gon\u00c3\u00a7alves <lurst@cpan.org>"
    ],
-   "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.120921",
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "unknown"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -16,24 +16,66 @@
    "no_index" : {
       "directory" : [
          "t",
-         "inc"
+         "xt",
+         "examples",
+         "corpus"
+      ],
+      "package" : [
+         "DB"
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Coverage::TrustPod" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage" : "1.08"
          }
       },
       "runtime" : {
-         "requires" : {}
+         "requires" : {
+            "Carp" : "0",
+            "POSIX" : "0",
+            "perl" : "5.006",
+            "strict" : "0",
+            "warnings" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0",
+            "File::Find" : "0",
+            "File::Spec::Functions" : "0",
+            "File::Temp" : "0",
+            "List::Util" : "0",
+            "Test::More" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "Term::Vspark" : {
+         "file" : "lib/Term/Vspark.pm",
+         "version" : "0.07"
       }
    },
    "release_status" : "stable",
-   "version" : "0.06"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/LuRsT/term-vspark/issues"
+      },
+      "homepage" : "https://metacpan.org/release/Term-Vspark",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/LuRsT/term-vspark.git",
+         "web" : "https://github.com/LuRsT/term-vspark"
+      }
+   },
+   "version" : "0.07"
 }
+

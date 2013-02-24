@@ -1,8 +1,18 @@
 Changes
-Makefile.PL
+LICENSE
 MANIFEST
+META.json
+META.yml
+Makefile.PL
 README
-t/Term-Vspark.t
+dist.ini
 lib/Term/Vspark.pm
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+t/00-compile.t
+t/00-report-prereqs.t
+t/Term-Vspark.t
+xt/author/critic.t
+xt/release/distmeta.t
+xt/release/pod-coverage.t
+xt/release/pod-syntax.t
+xt/release/portability.t
+xt/release/test-version.t
