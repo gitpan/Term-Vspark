@@ -7,7 +7,7 @@ use Carp qw{ croak };
 
 our @ISA = qw();
 
-our $VERSION = '0.07'; # VERSION
+our $VERSION = '0.08'; # VERSION
 
 sub show_single_bar {
     my $num     = shift || 0;
@@ -32,7 +32,7 @@ sub show_graph {
 
     my $str = q{};
     for my $i ( @values ) {
-        $str .= printf( "%s\n", show_single_bar($i, $max, $columns) );
+        $str .= sprintf( "%s\n", show_single_bar($i, $max, $columns) );
     }
 
     return $str;
@@ -51,7 +51,7 @@ sub show_labeled_graph {
 
     my $str = q{};
     for my $i ( keys %k_values ) {
-        $str .= printf( "%10s %s\n", $i, show_single_bar($k_values{$i}, $max, $columns) );
+        $str .= sprintf( "%10s %s\n", $i, show_single_bar($k_values{$i}, $max, $columns) );
     }
 
     return $str;
@@ -73,7 +73,7 @@ Displays beautiful graphs to use in the terminal
 
 =head1 DESCRIPTION
 
-=head2 Methods
+=head2 METHODS
 
 Returns a string with a single utf8 bar according to the values
 
@@ -93,10 +93,23 @@ Example:
     my @list = sort { $a <=> $b } @ARGV;
     my ($columns, $rows) = Term::Size::chars *STDOUT{IO};
 
-    Term::Vspark::show_graph(
+    print Term::Vspark::show_graph(
         'max'     => $list[-1],
         'columns' => $columns,
         'values'  => \@ARGV,
+    );
+
+Example 2:
+
+    chomp( @ARGV = <STDIN> ) unless @ARGV;
+    my %k_values = @ARGV;
+
+    my @list = sort { $a <=> $b } values %k_values;
+
+    print Term::Vspark::show_labeled_graph(
+        'max'      => $list[-1],
+        'columns'  => 10,
+        'k_values' => \%k_values,
     );
 
 This will receive numbers from ARGV or STDIN and print out beutiful graph based on that data.
@@ -110,18 +123,6 @@ Term::Vspark - Perl extension for dispaying bars in the terminal
 =head1 SEE ALSO
 
 Original repo: https://github.com/LuRsT/vspark
-
-=head1 AUTHOR
-
-Gil Gonçalves <lurst@cpan.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (C) 2013 by Gil Gonçalves
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.16.2 or,
-at your option, any later version of Perl 5 you may have available.
 
 =head1 AUTHOR
 
