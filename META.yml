@@ -29,7 +29,7 @@ no_index:
 provides:
   Term::Vspark:
     file: lib/Term/Vspark.pm
-    version: 0.08
+    version: 0.09
 requires:
   Carp: 0
   POSIX: 0
@@ -40,4 +40,4 @@ resources:
   bugtracker: https://github.com/LuRsT/term-vspark/issues
   homepage: https://metacpan.org/release/Term-Vspark
   repository: git://github.com/LuRsT/term-vspark.git
-version: 0.08
+version: 0.09

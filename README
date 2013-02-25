@@ -8,7 +8,7 @@ DESCRIPTION
   METHODS
     Returns a string with a single utf8 bar according to the values
 
-        Term::Vspark::show_single_bar($value_for_this_bar, $max_value, $number_of_columns_to_display);
+        Term::Vspark::show_bar($value_for_this_bar, $max_value, $number_of_columns_to_display);
 
     Returns a string with a various utf8 bars according to the values
 
