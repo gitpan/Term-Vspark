@@ -5,6 +5,8 @@ META.json
 META.yml
 Makefile.PL
 README
+bin/show_graph.pl
+bin/show_labeled_graph.pl
 dist.ini
 lib/Term/Vspark.pm
 t/00-compile.t

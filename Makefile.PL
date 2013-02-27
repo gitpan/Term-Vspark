@@ -23,16 +23,20 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Term-Vspark",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/show_graph.pl",
+    "bin/show_labeled_graph.pl"
+  ],
   "LICENSE" => "perl",
   "NAME" => "Term::Vspark",
   "PREREQ_PM" => {
     "Carp" => 0,
     "POSIX" => 0,
+    "Sub::Exporter" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.11",
+  "VERSION" => "0.20",
   "test" => {
     "TESTS" => "t/*.t"
   }

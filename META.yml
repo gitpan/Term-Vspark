@@ -29,10 +29,11 @@ no_index:
 provides:
   Term::Vspark:
     file: lib/Term/Vspark.pm
-    version: 0.11
+    version: 0.20
 requires:
   Carp: 0
   POSIX: 0
+  Sub::Exporter: 0
   perl: 5.006
   strict: 0
   warnings: 0
@@ -40,4 +41,8 @@ resources:
   bugtracker: https://github.com/LuRsT/term-vspark/issues
   homepage: https://metacpan.org/release/Term-Vspark
   repository: git://github.com/LuRsT/term-vspark.git
-version: 0.11
+version: 0.20
+x_contributors:
+  - 'Eric Johnson <eric.git@iijo.org>'
+  - 'Gil Gonçalves <lursty@gmail.com>'
+  - 'Gilberto Gonçalves <lursty@gmail.com>'

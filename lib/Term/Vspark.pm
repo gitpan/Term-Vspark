@@ -5,9 +5,13 @@ use warnings;
 use POSIX;
 use Carp qw{ croak };
 
+use Sub::Exporter -setup => {
+    'exports' => [ 'show_bar', 'show_graph', 'show_labeled_graph', ],
+};
+
 our @ISA = qw();
 
-our $VERSION = '0.11'; # VERSION
+our $VERSION = '0.20'; # VERSION
 
 sub show_bar {
     my $num     = shift || 0;
@@ -27,12 +31,12 @@ sub show_bar {
 sub show_graph {
     my %args    = @_;
 
-    my $max     = $args{'max'}         || 1;
-    my $columns = $args{'columns'}     || 1;
-    my @values  = @{ $args{'values'} } || ();
+    my $max     = $args{'max'}     || 1;
+    my $columns = $args{'columns'} || 1;
+    my $values  = $args{'values'}  || [];
 
     my $str = q{};
-    for my $i ( @values ) {
+    for my $i ( @{ $values } ) {
         $str .= sprintf( "%s\n", show_bar($i, $max, $columns) );
     }
 

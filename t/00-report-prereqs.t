@@ -17,6 +17,7 @@ my @modules = qw(
   File::Temp
   List::Util
   POSIX
+  Sub::Exporter
   Test::More
   perl
   strict
