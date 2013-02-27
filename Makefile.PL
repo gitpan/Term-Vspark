@@ -16,6 +16,7 @@ my %WriteMakefileArgs = (
     "File::Find" => 0,
     "File::Spec::Functions" => 0,
     "File::Temp" => 0,
+    "List::Util" => 0,
     "Test::More" => 0
   },
   "CONFIGURE_REQUIRES" => {
@@ -27,12 +28,11 @@ my %WriteMakefileArgs = (
   "NAME" => "Term::Vspark",
   "PREREQ_PM" => {
     "Carp" => 0,
-    "List::Util" => 0,
     "POSIX" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.10",
+  "VERSION" => "0.11",
   "test" => {
     "TESTS" => "t/*.t"
   }

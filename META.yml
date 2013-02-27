@@ -7,6 +7,7 @@ build_requires:
   File::Find: 0
   File::Spec::Functions: 0
   File::Temp: 0
+  List::Util: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -28,10 +29,9 @@ no_index:
 provides:
   Term::Vspark:
     file: lib/Term/Vspark.pm
-    version: 0.10
+    version: 0.11
 requires:
   Carp: 0
-  List::Util: 0
   POSIX: 0
   perl: 5.006
   strict: 0
@@ -40,4 +40,4 @@ resources:
   bugtracker: https://github.com/LuRsT/term-vspark/issues
   homepage: https://metacpan.org/release/Term-Vspark
   repository: git://github.com/LuRsT/term-vspark.git
-version: 0.10
+version: 0.11
