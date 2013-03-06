@@ -12,7 +12,7 @@ use Sub::Exporter -setup => {
 
 our @ISA = qw();
 
-our $VERSION = '0.21'; # VERSION
+our $VERSION = '0.25'; # VERSION
 
 sub show_bar {
     my $num     = shift || 0;

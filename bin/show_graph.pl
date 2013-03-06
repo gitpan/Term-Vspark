@@ -1,7 +1,12 @@
+use strict;
+use warnings;
+
 use Term::Vspark qw{ show_graph };
 
-our $VERSION = '0.21'; # VERSION
+our $VERSION = '0.25'; # VERSION
 # PODNAME: show_graph
+
+binmode STDOUT, ':encoding(UTF-8)';
 
 chomp( @ARGV = <STDIN> ) unless @ARGV;
 
