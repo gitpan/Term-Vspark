@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Perl extension for dispaying bars in the terminal",
+  "ABSTRACT" => "Displays a graph in the terminal",
   "AUTHOR" => "Gil Gon\303\247alves <lurst\@cpan.org>",
   "BUILD_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
@@ -24,8 +24,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Term-Vspark",
   "EXE_FILES" => [
-    "bin/show_graph.pl",
-    "bin/show_labeled_graph.pl"
+    "bin/vspark"
   ],
   "LICENSE" => "perl",
   "NAME" => "Term::Vspark",
@@ -37,7 +36,7 @@ my %WriteMakefileArgs = (
     "utf8" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.25",
+  "VERSION" => "0.30",
   "test" => {
     "TESTS" => "t/*.t"
   }
